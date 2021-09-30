@@ -77,6 +77,8 @@
             if (weakSelf.model) {
                 weakSelf.homeLab.text = weakSelf.model.name;
                 [CDHelper setupHomeId:weakSelf.model.homeId];
+                
+                
             }
         }
         
