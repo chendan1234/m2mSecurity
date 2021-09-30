@@ -154,7 +154,6 @@
             [self setupDevice];
         }
     }];
-    
 }
 
 
