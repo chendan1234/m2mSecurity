@@ -37,11 +37,12 @@
         self.orderNumLab.text = [NSString stringWithFormat:@"订单号: %@",self.orderModel.orderNumber];
         self.serviceNameLab.text = self.orderModel.serviceName;
         self.moneyLab.text = [NSString stringWithFormat:@"实付: %ld",self.orderModel.money];
-//        self.timeLab.text = [CDHelper getServiceDayWith:self.orderModel.life];
+        self.timeLab.text = [CDHelper time_timestampToString:self.orderModel.createTime/1000];
     }else{
         self.orderNumLab.text = [NSString stringWithFormat:@"订单号: %@",self.detailModel.orderNumber];
         self.serviceNameLab.text = self.detailModel.serviceName;
         self.moneyLab.text = [NSString stringWithFormat:@"实付: %ld",self.detailModel.money];
+        self.timeLab.text = [CDHelper time_timestampToString:self.detailModel.createTime];
     }
 }
 

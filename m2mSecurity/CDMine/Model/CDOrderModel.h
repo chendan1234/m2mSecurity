@@ -33,6 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong)NSString *orderNumber;
 @property (nonatomic, strong)NSString *serviceName;
 @property (nonatomic, strong)NSString *reasonForRefund;//拒绝理由
+@property (nonatomic, strong)NSString *payment;//支付需要
 
 @property (nonatomic, assign)NSInteger createTime;
 @property (nonatomic, assign)NSInteger expireTime;
@@ -41,6 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign)NSInteger startTime;
 @property (nonatomic, assign)NSInteger money;
 @property (nonatomic, assign)NSInteger purchaseTime;
+
 
 
 @end

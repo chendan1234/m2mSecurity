@@ -31,6 +31,7 @@
 -(void)getData{
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [HttpRequest HR_AppNewestAppSettingWithParams:dic success:^(id result) {
+        NSLog(@"---%@",result);
         if ([result[@"code"] intValue] == 200) {
             self.dataArr = [NewFeatureModel mj_objectArrayWithKeyValuesArray:[CDHelper jsonToDic:result[@"data"][@"content"]]];
             [self setupScrollV];

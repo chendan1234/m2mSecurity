@@ -197,7 +197,6 @@ failure(error);\
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setValue:Token forHTTPHeaderField:@"Authorization"];
-    
     return manager;
 }
 
@@ -369,6 +368,48 @@ failure(error);\
 //分享, 获取用户信息
 + (void)HR_AppInfoByEmailOrMobileWithParams:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure{
     RequestForm(AppInfoByEmailOrMobile);
+}
+
+/**
+ * 3.消息
+ */
++ (void)HR_AppPushListWithParams:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure{
+    RequestForm(AppPushList);
+}
+
++ (void)HR_AppPushDetailWithContent:(NSString *)content Params:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure{
+    NSString *url = [NSString stringWithFormat:@"%@%@/%@",Service_IP,AppPushDetail,content];
+    [[self getFormManager] POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+               success(responseObject);
+       } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+               failure(error);
+    }];
+}
+
++ (void)HR_AppPushHaveReadWithContent:(NSString *)content Params:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure{
+    NSString *url = [NSString stringWithFormat:@"%@%@/%@",Service_IP,AppPushHaveRead,content];
+    [[self getFormManager] POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+               success(responseObject);
+       } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+               failure(error);
+    }];
+}
+
+/**
+ * 4.帮助
+ */
++ (void)HR_AppAssistanceWithParams:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure{
+    RequestForm(AppAssistance);
+}
+
+//用户详情
++ (void)HR_AppUserInfoWithContent:(NSString *)content Params:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure{
+    NSString *url = [NSString stringWithFormat:@"%@%@/%@",Service_IP,AppUserInfo,content];
+    [[self getFormManager] POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+               success(responseObject);
+       } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+               failure(error);
+    }];
 }
 
 

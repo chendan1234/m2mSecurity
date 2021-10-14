@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong)NSString *timeStr;
 @property (nonatomic, strong)NSString *paymentIntentClientSecret;
 
+
 @property (nonatomic, strong)NSString *num;
 @property (nonatomic, strong)NSString *cvc;
 @property (nonatomic, assign)NSInteger expMonth;

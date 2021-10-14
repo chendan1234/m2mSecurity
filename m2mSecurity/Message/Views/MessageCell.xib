@@ -28,57 +28,29 @@
                                     <constraint firstAttribute="height" constant="1" id="MjJ-Yb-OG5"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeE-NX-sca">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeE-NX-sca">
                                 <rect key="frame" x="0.0" y="154" width="375" height="45"/>
                                 <state key="normal" title="立即查看"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021-09-12 15:45" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSN-CI-VvZ">
-                                <rect key="frame" x="241" y="20" width="118" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021-09-12 15:45:24" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSN-CI-VvZ">
+                                <rect key="frame" x="223" y="20" width="136" height="16"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="118" id="oNR-HA-JRW"/>
+                                    <constraint firstAttribute="width" constant="136" id="oNR-HA-JRW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您的退款申请已提交" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ba-Mb-meP">
-                                <rect key="frame" x="32" y="18" width="209" height="20"/>
+                                <rect key="frame" x="32" y="18" width="191" height="20"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXk-s2-CuE">
-                                <rect key="frame" x="16" y="54" width="343" height="82.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXk-s2-CuE">
+                                <rect key="frame" x="16" y="50" width="343" height="84"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="2.2.1 ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" metaFont="system" size="15"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="即将发布，在新版本中我们增加了对新型号设备的支持，优化了部分旧设备的操控逻辑，修改了部分文案信息，修复了部分">
-                                        <attributes>
-                                            <color key="NSColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="15" name=".PingFangSC-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="bug">
-                                        <attributes>
-                                            <color key="NSColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" metaFont="system" size="15"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="。在新版本中我们增加了对新型号设备的支持，修改了部">
-                                        <attributes>
-                                            <color key="NSColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="15" name=".PingFangSC-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="…">
+                                    <fragment content="2.2.1 即将发布，在新版本中我们增加了对新型号设备的支持，优化了部分旧设备的操控逻辑，修改了部分文案信息，修复了部分bug。在新版本中我们增加了对新型号设备的支持，修改了部…">
                                         <attributes>
                                             <color key="NSColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" metaFont="system" size="15"/>
@@ -124,7 +96,7 @@
                             <constraint firstItem="kYJ-dM-BLM" firstAttribute="leading" secondItem="sgL-dM-IuQ" secondAttribute="leading" constant="16" id="CCN-yw-9GF"/>
                             <constraint firstAttribute="trailing" secondItem="XeE-NX-sca" secondAttribute="trailing" id="E3A-cD-rR3"/>
                             <constraint firstAttribute="bottom" secondItem="XeE-NX-sca" secondAttribute="bottom" id="IBf-3X-yEw"/>
-                            <constraint firstItem="xXk-s2-CuE" firstAttribute="top" secondItem="6Ba-Mb-meP" secondAttribute="bottom" constant="16" id="Myj-i7-soT"/>
+                            <constraint firstItem="xXk-s2-CuE" firstAttribute="top" secondItem="6Ba-Mb-meP" secondAttribute="bottom" constant="12" id="Myj-i7-soT"/>
                             <constraint firstAttribute="trailing" secondItem="lSN-CI-VvZ" secondAttribute="trailing" constant="16" id="ObX-rj-crk"/>
                             <constraint firstItem="9aS-vQ-YVX" firstAttribute="leading" secondItem="sgL-dM-IuQ" secondAttribute="leading" id="Wbt-yQ-Mfs"/>
                             <constraint firstItem="XeE-NX-sca" firstAttribute="top" secondItem="9aS-vQ-YVX" secondAttribute="bottom" id="ZEH-LD-mBw"/>
@@ -145,6 +117,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+            <connections>
+                <outlet property="contentLab" destination="xXk-s2-CuE" id="I4m-q7-VPO"/>
+                <outlet property="timeLab" destination="lSN-CI-VvZ" id="m9m-ml-En8"/>
+                <outlet property="tipW" destination="Clo-UW-yo3" id="1AU-jd-FPi"/>
+                <outlet property="titleLab" destination="6Ba-Mb-meP" id="ppu-bQ-qIw"/>
+            </connections>
             <point key="canvasLocation" x="21.014492753623191" y="159.04017857142856"/>
         </tableViewCell>
     </objects>

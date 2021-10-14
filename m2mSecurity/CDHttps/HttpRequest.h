@@ -115,4 +115,19 @@ typedef void(^FailureBlock)(NSError*error);
 //分享, 获取用户信息
 + (void)HR_AppInfoByEmailOrMobileWithParams:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure;
 
+/**
+ * 3.消息
+ */
++ (void)HR_AppPushListWithParams:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure;
++ (void)HR_AppPushDetailWithContent:(NSString *)content Params:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure;
++ (void)HR_AppPushHaveReadWithContent:(NSString *)content Params:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure;
+
+/**
+ * 4.帮助
+ */
++ (void)HR_AppAssistanceWithParams:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure;
+
+//用户详情
++ (void)HR_AppUserInfoWithContent:(NSString *)content Params:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure;
+
 @end

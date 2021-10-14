@@ -57,6 +57,9 @@
     datePicker.lineBackgroundColor = [UIColor lightGrayColor];
     datePicker.datePickerMode = PGDatePickerModeYearAndMonth;
     datePickManager.isShadeBackground = YES;
+    
+    datePicker.minimumDate = [NSDate new];
+    
     datePicker.selectedDate = ^(NSDateComponents *dateComponents) {
         self.timeLab.textColor = [UIColor blackColor];
         self.timeLab.text = [NSString stringWithFormat:@"%ld年%ld月",dateComponents.year,dateComponents.month];
@@ -92,18 +95,6 @@
     _model = model;
     self.titleMainLab.text = [NSString stringWithFormat:@"%@*",model.serviceName];
     self.titleTimeLab.text = model.timeStr;
-    
-    NSLog(@"---%@---%ld---%@",model.serviceName,model.serviceDay,model.timeStr);
-    
-//    NSArray *serviceNameArr = [model.serviceName componentsSeparatedByString:@"*"];
-    
-//    if (serviceNameArr.count == 3) {
-//        self.titleMainLab.text = [NSString stringWithFormat:@"%@*%@*",serviceNameArr[0],serviceNameArr[1]];
-//    }else{
-//        self.titleTimeLab.hidden = YES;
-//    }
-    
-    
     self.moneyLab.text = [NSString stringWithFormat:@"%ld",model.money/100];
 }
 

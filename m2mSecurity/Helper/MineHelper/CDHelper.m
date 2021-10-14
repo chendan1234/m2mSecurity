@@ -437,6 +437,20 @@
 
 }
 
++ (NSString *)time_timestampToString2:(NSInteger)timestamp{
+
+    NSDate *confromTimesp = [NSDate dateWithTimeIntervalSince1970:timestamp];
+
+    NSDateFormatter *dateFormat=[[NSDateFormatter alloc]init];
+
+     [dateFormat setDateFormat:@"yyyy-MM-dd"];
+
+    NSString* string=[dateFormat stringFromDate:confromTimesp];
+
+    return string;
+
+}
+
 +(NSString *)getServiceDayWith:(NSInteger)serviceDay{
     
     NSInteger year = serviceDay / 365;
@@ -477,7 +491,6 @@
             NSData *jsonData = [result[@"data"] dataUsingEncoding:NSUTF8StringEncoding];
             NSDictionary *result = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
             model.paymentIntentClientSecret = result[@"clientSecret"];
-            
             CDPayViewController *payVC = [[CDPayViewController alloc]init];
             payVC.model = model;
             [VC.navigationController pushViewController:payVC animated:YES];
@@ -812,6 +825,22 @@
     }];
     
     [popView pop];
+}
+
+
+//获取未读消息条数
++(void)getNoReadMessageNum{
+    NSMutableDictionary *parames = [NSMutableDictionary dictionary];
+    parames[@"page"] = @(1);
+    parames[@"size"] = @(1);
+    parames[@"userId"] = [[NSUserDefaults standardUserDefaults] objectForKey:KUserId];
+    
+    [HttpRequest HR_AppPushListWithParams:parames success:^(id result) {
+        if ([result[@"code"] intValue] == 200) {
+            NSString *noRead = result[@"data"][@"nread"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:KHaveNoti object:noRead];
+        }
+    } failure:^(NSError *error) {}];
 }
 
 

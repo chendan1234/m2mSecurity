@@ -134,17 +134,6 @@
 
 -(void)tuYaLogin{
     
-//    NSString *userId = [NSString stringWithFormat:@"m2m%@",self.telOrEmailTF.text];
-//    NSString *password = [NSString stringWithFormat:@"m2m%@",self.passwordTF.text];
-//    [[TuyaSmartUser sharedInstance] loginOrRegisterWithCountryCode:@"1" uid:userId password:password createHome:NO success:^(id result) {
-//        self.uid = result[@"uid"];
-//        [self saveData];
-//    } failure:^(NSError *error) {
-//        NSLog(@"登录失败2 --- %@",error);
-//        [self.view pv_failureLoading:@"登录失败, 请重新登录!"];
-//    }];
-    
-    
     NSString *userId = [NSString stringWithFormat:@"m2m%@_CD",self.loginData[@"data"][@"appUser"][@"userId"]];
     NSString *password = [CDHelper md5HexDigest:userId];
     [[TuyaSmartUser sharedInstance] loginOrRegisterWithCountryCode:@"1" uid:userId password:password createHome:YES success:^(id result) {
@@ -153,7 +142,6 @@
         [self saveData];
         
     } failure:^(NSError *error) {
-        NSLog(@"登录失败2 --- %@",error);
         [self.view pv_failureLoading:@"登录失败, 请重新登录!"];
     }];
 }

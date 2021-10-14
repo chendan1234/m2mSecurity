@@ -1,8 +1,8 @@
 //
-//  HelpCell.h
+//  HelpDetailViewController.h
 //  m2mSecurity
 //
-//  Created by chendan on 2021/9/10.
+//  Created by chendan on 2021/10/13.
 //
 
 #import <UIKit/UIKit.h>
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HelpCell : UITableViewCell
+@interface HelpDetailViewController : UIViewController
 
 @property (nonatomic, strong)HelpModel *model;
 

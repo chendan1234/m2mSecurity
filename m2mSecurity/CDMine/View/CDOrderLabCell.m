@@ -31,7 +31,7 @@
     
     self.createTimeLab.text = [CDHelper time_timestampToString:model.createTime/1000];
     self.timeLab.text = [CDHelper getServiceDayWith:model.life];
-    self.moneyLab.text = [NSString stringWithFormat:@"实付 %ld",model.money];
+    self.moneyLab.text = [NSString stringWithFormat:@"实付 ¥%ld",model.money];
     
     switch (model.status) {
         case 7://拒绝退款

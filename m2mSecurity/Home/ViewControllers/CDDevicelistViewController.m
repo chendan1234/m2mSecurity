@@ -248,9 +248,6 @@ static NSString *collectionCellID = @"collectionCellID";
             [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:KIsHaveWangGuan];
         }
     }
-    
-    
-    
 }
 
 

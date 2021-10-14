@@ -54,8 +54,9 @@
     
     [self setupHome];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"KHaveNoti" object:@"5"];
+    [CDHelper getNoReadMessageNum];//获取未读消息条数
 }
+
 
 //获取家庭
 -(void)setupHome{

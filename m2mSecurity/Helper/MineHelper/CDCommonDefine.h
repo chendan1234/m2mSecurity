@@ -50,7 +50,7 @@
 //弱引用
 #define WeakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
 
-#define KToken @"token"
+//#define KToken @"token"
 #define KUserId @"KUserId"
 #define KNewFeature @"KNewFeature"
 #define KHomeId @"KHomeId"
@@ -59,6 +59,8 @@
 #define KIsHaveWangGuan @"KIsHaveWangGuan"
 
 #define KCategory @"KCategory"
+#define KHaveNoti @"KHaveNoti"
+#define KUpdateExpireTime @"KUpdateExpireTime"
 
 
 

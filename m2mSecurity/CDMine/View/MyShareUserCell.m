@@ -21,6 +21,8 @@
     self.nameLab.text = userModel.nickName;
     [self.iconImgV sd_setImageWithURL:[NSURL URLWithString:userModel.iconUrl] placeholderImage:[UIImage imageNamed:@"user"]];
     
+    NSLog(@"----%@",userModel.iconUrl);
+    
 }
 
 -(void)setType:(NSInteger)type{

@@ -108,4 +108,21 @@
 #define AppInfoByEmailOrMobile @"m2micro-app/appUserController/appInfoByEmailOrMobile"
 
 
+/**
+ * 3.消息
+ */
+#define AppPushList @"m2micro-app/appPush/list"
+#define AppPushDetail @"m2micro-app/appPush/info"
+#define AppPushHaveRead @"m2micro-app/appPush/haveRead"
+
+/**
+ * 4.帮助
+ */
+#define AppAssistance @"m2micro-app/appAssistance/appList"
+
+//用户详情
+#define AppUserInfo @"m2micro-app/appUserController/appInfo"
+
+
+
 #endif

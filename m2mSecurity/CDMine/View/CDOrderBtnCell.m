@@ -9,6 +9,7 @@
 #import "CDHelper.h"
 #import "CDRefundViewController.h"
 #import "CDSubscribeModel.h"
+#import "CDPayViewController.h"
 
 #import "OYCountDownManager.h"
 
@@ -68,7 +69,7 @@
 
     self.createTimeLab.text = [CDHelper time_timestampToString:model.createTime/1000];
     self.timeLab.text = [CDHelper getServiceDayWith:model.life];
-    self.moneyLab.text = [NSString stringWithFormat:@"实付 %ld",model.money];
+    self.moneyLab.text = [NSString stringWithFormat:@"实付 ¥%ld",model.money];
     
     if (model.status == 1) {
         self.statusLab.text = @"待付款";
@@ -97,7 +98,13 @@
         model.serviceName = self.model.serviceName;
         model.serviceDay = self.model.life;
         model.money = self.model.money * 100;
-        [CDHelper createOrderWithVC:[CDHelper viewControllerWithView:self] model:model];
+        
+        NSDictionary *dic = [CDHelper jsonToDic:self.model.payment];
+        model.paymentIntentClientSecret = dic[@"clientSecret"];
+        
+        CDPayViewController *payVC = [[CDPayViewController alloc]init];
+        payVC.model = model;
+        [[CDHelper viewControllerWithView:self].navigationController pushViewController:payVC animated:YES];
     }
 }
 

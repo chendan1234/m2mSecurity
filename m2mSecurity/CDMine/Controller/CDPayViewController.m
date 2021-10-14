@@ -36,7 +36,10 @@
     
     [payView setPayBlock:^(CDSubscribeModel * _Nonnull model) {
         self.model = model;
-        [self pay];
+        
+        [CDHelper setupAlterWithVC:self title:@"确认支付?" message:@"" sure:^{
+            [self pay];
+        }];
     }];
     
     UIView *bgV = [[UIView alloc]initWithFrame:payView.bounds];
@@ -52,6 +55,9 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     return nil;
 }
+
+
+
 
 -(void)pay{
     [self.view pv_showTextDialog:@"正在付款, 请稍后..."];
@@ -83,6 +89,7 @@
           }
           case STPPaymentHandlerActionStatusSucceeded: {
               [self.view pv_successLoading:@"支付成功!"];
+              [[NSNotificationCenter defaultCenter] postNotificationName:KUpdateExpireTime object:nil];//支付成功, 更新到期时间
               dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.75 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                   [self.navigationController popToRootViewControllerAnimated:YES];
               });

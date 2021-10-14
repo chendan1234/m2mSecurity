@@ -85,7 +85,7 @@ static NSString *labCellID = @"labCellID";
     
     [self.view pv_showTextDialog:@"正在加载..."];
     [HttpRequest HR_OrderAppListWithParams:parames success:^(id result) {
-        NSLog(@"---%@",result);
+        NSLog(@"订单列表---%@",result);
         if ([result[@"code"] intValue] == 200) {
             [self.view pv_hideMBHub];
             

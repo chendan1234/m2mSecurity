@@ -7,6 +7,11 @@
 
 #import "HelpCell.h"
 
+@interface HelpCell ()
+@property (weak, nonatomic) IBOutlet UILabel *titleLab;
+
+@end
+
 @implementation HelpCell
 
 - (void)awakeFromNib {
@@ -14,10 +19,9 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+-(void)setModel:(HelpModel *)model{
+    _model = model;
+    self.titleLab.text = model.title;
 }
 
 @end

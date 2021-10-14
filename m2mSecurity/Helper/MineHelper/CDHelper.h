@@ -83,6 +83,7 @@ typedef enum{
 +(void)setupAlterWithVC:(id)vc title:(NSString *)title message:(NSString *)message sure:(SureBlock)sure;
 
 +(NSString *)time_timestampToString:(NSInteger)timestamp;
++ (NSString *)time_timestampToString2:(NSInteger)timestamp;
 +(NSString *)getServiceDayWith:(NSInteger)serviceDay;
 +(void)createOrderWithVC:(id)vc model:(CDSubscribeModel *)model;
 +(dispatch_source_t)countTimeWithLab:(UILabel *)lab time:(NSInteger)time;
@@ -117,6 +118,9 @@ typedef enum{
 
 //设置属性弹框
 +(void)setupShuXingTanKuangWith:(NSArray *)dataArr viewH:(CGFloat)viewH title:(NSString *)title selectBlock:(selectBlock)selectBlock;
+
+//获取未读消息条数
++(void)getNoReadMessageNum;
 
 
 @end

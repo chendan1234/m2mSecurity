@@ -27,12 +27,18 @@
     //添加子控制器
     [self addChildVCs];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(haveNoti:) name:@"KHaveNoti" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(haveNoti:) name:KHaveNoti object:nil];
     
 }
 
 -(void)haveNoti:(NSNotification *)noti{
-    [self.tabBar setBadgeStyle:kCustomBadgeStyleNumber value:[noti.object intValue] atIndex:1];
+    NSInteger num = [noti.object intValue];
+    if (num) {
+        [self.tabBar setBadgeStyle:kCustomBadgeStyleNumber value:[noti.object intValue] atIndex:1];
+    }else{
+        [self.tabBar setBadgeStyle:kCustomBadgeStyleNone value:[noti.object intValue] atIndex:1];
+    }
+    
 }
 
 -(void)addChildVCs
