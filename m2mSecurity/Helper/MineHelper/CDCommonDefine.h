@@ -43,14 +43,17 @@
 #define NavHeight 64
 
 //token
-//#define Token  [[[NSUserDefaults standardUserDefaults] objectForKey:KToken] length] ? [[NSUserDefaults standardUserDefaults] objectForKey:KToken] : @""
+#define Token  [[[NSUserDefaults standardUserDefaults] objectForKey:KToken] length] ? [[NSUserDefaults standardUserDefaults] objectForKey:KToken] : @""
 
 #define Formal  [[[NSUserDefaults standardUserDefaults] objectForKey:KFormal] length] ? [[NSUserDefaults standardUserDefaults] objectForKey:KFormal] : @""
 
 //弱引用
 #define WeakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
 
-//#define KToken @"token"
+
+#define KLanguage @"CDLanguage"
+
+#define KToken @"token"
 #define KUserId @"KUserId"
 #define KNewFeature @"KNewFeature"
 #define KHomeId @"KHomeId"
@@ -61,6 +64,7 @@
 #define KCategory @"KCategory"
 #define KHaveNoti @"KHaveNoti"
 #define KUpdateExpireTime @"KUpdateExpireTime"
+#define KChangeUserIcon @"KChangeUserIcon"
 
 
 
@@ -76,7 +80,7 @@
 
 
 
-
+//#define KToken @"KToken"
 
 #define KMobile @"KMobile"
 #define KPassword @"KPassword"

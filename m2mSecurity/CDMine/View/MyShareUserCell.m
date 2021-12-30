@@ -32,7 +32,7 @@
 //全部取消
 - (IBAction)allCancel:(id)sender {
     
-    [CDHelper setupAlterWithVC:[CDHelper viewControllerWithView:self] title:@"确定取消改用户全部共享设备?" message:@"全部取消将删除该共享者, 您与之的共享设备将全部移除!" sure:^{
+    [CDHelper setupAlterWithVC:[CDHelper viewControllerWithView:self] title:@"确定取消该用户全部共享设备?" message:@"全部取消将删除该共享者, 您与之的共享设备将全部移除!" sure:^{
         [self deleteUser];
     }];
     

@@ -47,6 +47,17 @@ PODS:
   - SVProgressHUD (2.1)
   - TuyaCameraSDK (3.26.0)
   - TuyaCameraUIKit (3.21.0)
+  - TuyaSecurityBaseKit (1.0.1-rc.4):
+    - TuyaSmartBaseKit
+    - TuyaSmartDeviceCoreKit
+    - TuyaSmartDeviceKit
+    - TuyaSmartUtil
+    - YYModel
+  - TuyaSecurityBridgeKit (1.0.0-secbizbundle-3.3.5-rc.4):
+    - TuyaSecurityBaseKit
+    - TuyaSecurityServiceKit
+  - TuyaSecurityServiceKit (1.0.0-secbizbundle-3.3.5-rc.3):
+    - TuyaSecurityBaseKit
   - TuyaSmartActivatorCoreKit (3.28.5):
     - TuyaSmartDeviceCoreKit
   - TuyaSmartActivatorKit (3.26.6):
@@ -304,6 +315,9 @@ DEPENDENCIES:
   - Stripe (~> 21.7.0)
   - SVProgressHUD (= 2.1.0)
   - TuyaCameraUIKit
+  - TuyaSecurityBaseKit (from `https://images.tuyacn.com/smart/app/package/developer/sdk/1634281217/TuyaSecurityBaseKit.podspec.json`)
+  - TuyaSecurityBridgeKit (from `https://images.tuyacn.com/smart/app/package/developer/sdk/1632282362/TuyaSecurityBridgeKit.podspec.json`)
+  - TuyaSecurityServiceKit (from `https://images.tuyacn.com/smart/app/package/developer/sdk/1629187102/TuyaSecurityServiceKit.podspec.json`)
   - TuyaSmartCameraKit
   - TuyaSmartCloudServiceBizBundle
   - TuyaSmartDefaultPanelKit
@@ -389,6 +403,14 @@ SPEC REPOS:
     - TYUrlPredefinedExternal
     - TYVideoPlayer
 
+EXTERNAL SOURCES:
+  TuyaSecurityBaseKit:
+    :podspec: https://images.tuyacn.com/smart/app/package/developer/sdk/1634281217/TuyaSecurityBaseKit.podspec.json
+  TuyaSecurityBridgeKit:
+    :podspec: https://images.tuyacn.com/smart/app/package/developer/sdk/1632282362/TuyaSecurityBridgeKit.podspec.json
+  TuyaSecurityServiceKit:
+    :podspec: https://images.tuyacn.com/smart/app/package/developer/sdk/1629187102/TuyaSecurityServiceKit.podspec.json
+
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
@@ -412,6 +434,9 @@ SPEC CHECKSUMS:
   SVProgressHUD: 76eacbf6f547ee13b3b25e2fb42b52d4cad76112
   TuyaCameraSDK: 75db771f2447135531a950ac9380b22ec1f32eec
   TuyaCameraUIKit: 9cd35fcd081dfca5d6c89ff2784a133f969a08f7
+  TuyaSecurityBaseKit: 427a1f79f51b7465891b20a34edba3aaf3dfb843
+  TuyaSecurityBridgeKit: 42a1bac6613a492e8a7ba72a6cb0c685e9ad536d
+  TuyaSecurityServiceKit: 2319409d649118119251447332e2d609c6c1b656
   TuyaSmartActivatorCoreKit: e1f067ad69775dccf0b34bff91624d1691490513
   TuyaSmartActivatorKit: d7e8f9b5b0461c5aae49d5dc344be4fcb9b8aac3
   TuyaSmartBaseKit: a4dd94caabe98738fbc1bf2762a917e597189ec8
@@ -466,6 +491,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   ZXingObjC: fdbb269f25dd2032da343e06f10224d62f537bdb
 
-PODFILE CHECKSUM: 377d241cbcb55622e3049f8c5a12a9a221d32c2e
+PODFILE CHECKSUM: d9c94c0c56c6009292f5ece3fcc6a36255514734
 
 COCOAPODS: 1.10.1

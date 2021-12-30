@@ -60,12 +60,13 @@
     
     [self setupCongi];
     [self setupUI];
+    [self startConfiguration];
 }
 
 -(void)setupCongi{
     [self registNotification];
     
-    self.homeId = [[[NSUserDefaults standardUserDefaults] objectForKey:KHomeId] longValue];
+    self.homeId = [CDHelper getHomeId];
     if (self.homeId <= 0) {
         [CDHelper setupOneBtnAlterWithVC:self title:@"还未创建家庭" message:@"请先前往首页创建家庭, 再添加设备~~~" sure:^{
             [self.navigationController popToRootViewControllerAnimated:YES];
@@ -82,6 +83,7 @@
     
     //提示快闪
     NetFirstView *fristV = [NetFirstView reload];
+    fristV.isWangGuan = self.isWangGuan;
     fristV.frame = CGRectMake(0, 0, DEVICE_WIDRH, KContentHH);
     [fristV setNextBlcok:^{
         [self goToNextWith:1];
@@ -104,7 +106,7 @@
     [apV setNextBlock:^{
         [self goToNextWith:3];
         [self.fourV countTime];
-        [self startConfiguration];
+        [self startConfigurationSuccess];
     }];
     [scrollV addSubview:apV];
     
@@ -129,8 +131,6 @@
     
     
     self.myTableView.tableHeaderView = scrollV;
-
-    
 }
 
 
@@ -142,21 +142,30 @@
 
 
 - (void)startConfiguration {
-    [[TuyaSmartActivator sharedInstance] getTokenWithHomeId:self.homeId success:^(NSString *result) {
+    
+    [[TuyaSmartActivator sharedInstance] getTokenWithHomeId:[CDHelper getHomeId] success:^(NSString *result) {
         if (result && result.length > 0) {
             self.token = result;
         }
-        [self startConfiguration:self.token];
     } failure:^(NSError *error) {
         [self.view pv_failureLoading:error.localizedDescription];
     }];
 }
 
-- (void)startConfiguration:(NSString *)token {
-    NSString *ssid = self.secondV.wifiTF.text;
-    NSString *password = self.secondV.passwordTF.text;
-    [TuyaSmartActivator sharedInstance].delegate = self;
-    [[TuyaSmartActivator sharedInstance] startConfigWiFi:TYActivatorModeAP ssid:ssid password:password token:self.token timeout:100];
+- (void)startConfigurationSuccess{
+    
+    if (self.token) {
+        NSString *ssid = self.secondV.wifiTF.text;
+        NSString *password = self.secondV.passwordTF.text;
+        [TuyaSmartActivator sharedInstance].delegate = self;
+        
+        [[TuyaSmartActivator sharedInstance] startConfigWiFi:TYActivatorModeAP ssid:ssid password:password token:self.token timeout:100];
+    }else{
+        [self.view pv_warming:@"连接超时, 请退出后重试!"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.75 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.navigationController popViewControllerAnimated:YES];
+        });
+    }
 }
 
 

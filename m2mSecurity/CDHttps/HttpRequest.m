@@ -265,6 +265,11 @@ failure(error);\
     Request(AppTuya);
 }
 
+//涂鸦密码
++ (void)HR_TuYapasswordWithParams:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure{
+    RequestForm(TuYapassword);
+}
+
 //2.1修改个人资料
 + (void)HR_ModifyPersonalDataWithParams:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure{
     Request(ModifyPersonalData);
@@ -411,6 +416,7 @@ failure(error);\
                failure(error);
     }];
 }
+
 
 
 

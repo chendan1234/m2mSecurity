@@ -73,8 +73,6 @@
             break;
     }
     
-    
-    
     self.myTableView.tableHeaderView = contentView;
 }
 

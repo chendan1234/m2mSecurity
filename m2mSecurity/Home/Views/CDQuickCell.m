@@ -6,7 +6,6 @@
 //
 
 #import "CDQuickCell.h"
-#import "AddDeviceViewController.h"
 
 @interface CDQuickCell ()
 @property (weak, nonatomic) IBOutlet UILabel *nameLab;
@@ -22,8 +21,7 @@
 }
 
 - (IBAction)add:(id)sender {
-    AddDeviceViewController *addVC = [[AddDeviceViewController alloc]init];
-    [[CDHelper viewControllerWithView:self].navigationController pushViewController:addVC animated:YES];
+    
 }
 
 @end

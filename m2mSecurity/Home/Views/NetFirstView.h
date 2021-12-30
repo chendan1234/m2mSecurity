@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy)void(^nextBlcok)(void);
 
+@property (nonatomic, assign)BOOL isWangGuan;
+
 @end
 
 NS_ASSUME_NONNULL_END

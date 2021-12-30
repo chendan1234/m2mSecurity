@@ -102,6 +102,7 @@ typedef enum{
 
 + (void)judgeIsHavedWangGuanWithVc:(id)vc deviceModel:(TuyaSmartDeviceModel *)model;
 +(BOOL)isHaveWangGuan;
++(BOOL)isWangGuan2:(TuyaSmartDeviceModel *)model;
 +(TuyaSmartDeviceModel *)getWangGuanModel;
 
 //获取 / 设置 当前的设备类型
@@ -121,6 +122,15 @@ typedef enum{
 
 //获取未读消息条数
 +(void)getNoReadMessageNum;
+
+//更加url, 返回一张图片
++(UIImage *)getImageFromURL:(NSString *)fileURL;
+
++(NSString *)getUidWith:(NSString *)uid;
+
+
+//多语言
++(NSString *)getLanguageWithKey:(NSString *)key;
 
 
 @end

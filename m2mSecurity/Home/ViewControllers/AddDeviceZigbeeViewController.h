@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AddDeviceZigbeeViewController : UIViewController
 
 @property (nonatomic, strong)TuyaSmartDeviceModel *wangGuanModel;
+@property (nonatomic, assign)BOOL isWangGuan;
 
 @end
 

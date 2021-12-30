@@ -86,6 +86,7 @@
     
     //提示快闪
     NetFirstView *fristV = [NetFirstView reload];
+    fristV.isWangGuan = self.isWangGuan;
     fristV.frame = CGRectMake(0, 0, DEVICE_WIDRH, KContentHH);
     [fristV setNextBlcok:^{
         [self goToNextWith:1];

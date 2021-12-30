@@ -28,6 +28,11 @@ target 'm2mSecurity' do
   pod 'LSTPopView'
   pod 'ZXingObjC', '~> 3.6.4'
   pod 'TuyaSmartDefaultPanelKit'
+  
+  
+  pod 'TuyaSecurityBaseKit', :podspec => 'https://images.tuyacn.com/smart/app/package/developer/sdk/1634281217/TuyaSecurityBaseKit.podspec.json'
+  pod 'TuyaSecurityServiceKit', :podspec => 'https://images.tuyacn.com/smart/app/package/developer/sdk/1629187102/TuyaSecurityServiceKit.podspec.json'
+  pod 'TuyaSecurityBridgeKit', :podspec => 'https://images.tuyacn.com/smart/app/package/developer/sdk/1632282362/TuyaSecurityBridgeKit.podspec.json'
 
   # Pods for m2mSecurity
 

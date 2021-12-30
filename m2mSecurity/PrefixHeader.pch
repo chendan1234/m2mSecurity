@@ -17,6 +17,11 @@
 
 #import <TuyaSmartHomeKit/TuyaSmartKit.h>
 #import <TuyaSmartCameraKit/TuyaSmartCameraKit.h>
+#import <TuyaSecurityBaseKit/TuyaSecurityBaseKit.h>
+#import <TuyaSecurityServiceKit/TuyaSecurityServiceKit.h>
+#import <TuyaSecurityBridgeKit/TuyaSecurityBridge.h>
+
+
 #import "CameraViewConstants.h"
 #import "UIView+CameraAdditions.h"
 #import "CDCommonDefine.h"

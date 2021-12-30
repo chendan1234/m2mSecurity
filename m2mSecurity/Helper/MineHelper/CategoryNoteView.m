@@ -86,7 +86,15 @@
 //demo懒得导masony~用frame凑合凑合
 - (void)layoutSubviews {
 
-    self.bgImgView.frame = CGRectMake(self.frame.size.width/2 - self.bgImgView.image.size.width/2, self.imageVY, self.bgImgView.image.size.width, self.bgImgView.image.size.height);
+//
+    
+    if (self.imageVY == 21) {
+        self.bgImgView.frame = CGRectMake(self.frame.size.width/2 - self.bgImgView.image.size.width/2, self.imageVY, self.bgImgView.image.size.width, self.bgImgView.image.size.height);
+    }else{
+        self.bgImgView.frame = CGRectMake((DEVICE_WIDRH - self.bgImgView.image.size.width)/2, self.imageVY, self.bgImgView.image.size.width, self.bgImgView.image.size.height);
+    }
+    
+    
 
     self.noteLabel.frame = CGRectMake(0, CGRectGetMaxY(self.bgImgView.frame) + 20, self.frame.size.width, 20);
 

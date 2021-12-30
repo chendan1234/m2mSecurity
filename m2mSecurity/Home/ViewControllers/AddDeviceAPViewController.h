@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AddDeviceAPViewController : UIViewController
 
+@property (nonatomic, assign)BOOL isWangGuan;
+
 @end
 
 NS_ASSUME_NONNULL_END

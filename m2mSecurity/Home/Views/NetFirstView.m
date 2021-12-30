@@ -12,6 +12,7 @@
 
 @property (nonatomic, assign)BOOL isSelect;
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;
+@property (weak, nonatomic) IBOutlet UILabel *tipLab;
 
 @end
 
@@ -26,7 +27,25 @@
 -(void)awakeFromNib{
     [super awakeFromNib];
     
-    NSArray *images=[NSArray arrayWithObjects:[UIImage imageNamed:@"san"],[UIImage imageNamed:@"noSan"], nil];
+    
+}
+
+-(void)setIsWangGuan:(BOOL)isWangGuan{
+    _isWangGuan = isWangGuan;
+    
+    if (isWangGuan) {
+        self.tipLab.text = @"接通电源, 请确认红灯快闪, 蓝灯常亮";
+        NSArray *images=[NSArray arrayWithObjects:[UIImage imageNamed:@"wg_r"],[UIImage imageNamed:@"wg_h"], nil];
+        [self imageAnimationWithImages:images];
+    }else{
+        NSArray *images=[NSArray arrayWithObjects:[UIImage imageNamed:@"san"],[UIImage imageNamed:@"noSan"], nil];
+        [self imageAnimationWithImages:images];
+    }
+    
+    
+}
+
+-(void)imageAnimationWithImages:(NSArray *)images{
     self.tipImgV.image = [UIImage imageNamed:@"noSan"];
     //imageView的动画图片是数组images
     self.tipImgV.animationImages = images;
@@ -37,6 +56,7 @@
     
     [self.tipImgV startAnimating];
 }
+
 - (IBAction)tip:(UIButton *)sender {
     if (self.isSelect) {
         self.isSelect = NO;

@@ -54,7 +54,7 @@ static NSString *cellID = @"cellID";
     self.myTableView.dataSource = self;
     
     
-    [self.myTableView addNoteViewWithpicName:@"noHomeSmall" noteText:@"" refreshBtnImg:nil orginY:20];
+    [self.myTableView addNoteViewWithpicName:@"noHomeSmall" noteText:@"" refreshBtnImg:nil orginY:21];
     [self getHomeList];
     
 }

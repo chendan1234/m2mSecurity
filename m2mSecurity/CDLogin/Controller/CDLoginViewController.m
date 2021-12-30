@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTF;
 
 @property (nonatomic, strong)NSString *uid;
+@property (nonatomic, strong)NSString *password;
 
 
 @property (nonatomic, strong)id loginData;
@@ -93,15 +94,7 @@
     [self.navigationController pushViewController:changePwdVC animated:YES];
 }
 
-//快速配置
-- (IBAction)QuickConfiguration:(id)sender {
-    
-}
 
-//设备列表
-- (IBAction)DeviceList:(id)sender {
-    
-}
 
 //收键盘
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -118,29 +111,40 @@
 
     [self.view pv_showTextDialog:KLogining];
     [HttpRequest HR_LoginWithParams:parames success:^(id result) {
-        NSLog(@"登录---%@",result);
         if ([result[@"code"] intValue] == 200) {
             self.loginData = result;
-            [self tuYaLogin];
-            
+            [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"Bearer %@",self.loginData[@"data"][@"tokenId"]] forKey:KToken];
+            [self tuYaPassword];
         }else{
             [CDHelper dealWithPingTaiErrorWithVC:self result:result];
         }
     } failure:^(NSError *error) {
-        NSLog(@"登录失败1 --- %@",error);
+        [self.view pv_failureLoading:KNetWorkError];
+    }];
+}
+
+//获取密码
+-(void)tuYaPassword{
+    [HttpRequest HR_TuYapasswordWithParams:@{} success:^(id result) {
+        if ([result[@"code"] intValue] == 200) {
+            self.password = result[@"data"];
+            [self tuYaLogin];
+        }else{
+            [CDHelper dealWithPingTaiErrorWithVC:self result:result];
+        }
+    } failure:^(NSError *error) {
         [self.view pv_failureLoading:KNetWorkError];
     }];
 }
 
 -(void)tuYaLogin{
     
-    NSString *userId = [NSString stringWithFormat:@"m2m%@_CD",self.loginData[@"data"][@"appUser"][@"userId"]];
-    NSString *password = [CDHelper md5HexDigest:userId];
+    NSString *userId = [CDHelper getUidWith:self.loginData[@"data"][@"appUser"][@"userId"]];
+    NSString *password = self.password;
+    
     [[TuyaSmartUser sharedInstance] loginOrRegisterWithCountryCode:@"1" uid:userId password:password createHome:YES success:^(id result) {
-        
         self.uid = result[@"uid"];
         [self saveData];
-        
     } failure:^(NSError *error) {
         [self.view pv_failureLoading:@"登录失败, 请重新登录!"];
     }];
@@ -202,21 +206,15 @@
     
     
     if (user.avatarUrl) {
-        [[TuyaSmartUser sharedInstance] updateHeadIcon:[self getImageFromURL:user.avatarUrl] success:^{
+        [[TuyaSmartUser sharedInstance] updateHeadIcon:[CDHelper getImageFromURL:user.avatarUrl] success:^{
             NSLog(@"头像更新成功");
         } failure:^(NSError *error) {
-             NSLog(@"头像更新失败");
+            NSLog(@"头像更新失败");
         }];
     }
    
 }
 
--(UIImage *)getImageFromURL:(NSString *)fileURL {
-    UIImage * result;
-    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:fileURL]];
-    result = [UIImage imageWithData:data];
-    return result;
-}
 
     
 

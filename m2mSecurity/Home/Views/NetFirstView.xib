@@ -114,6 +114,7 @@
             <connections>
                 <outlet property="nextBtn" destination="T19-ph-tB8" id="obi-AJ-dBy"/>
                 <outlet property="tipImgV" destination="42Q-5c-FOw" id="JL6-Sc-a6W"/>
+                <outlet property="tipLab" destination="Gar-yb-AkW" id="b5s-8J-51K"/>
             </connections>
             <point key="canvasLocation" x="-4.3478260869565224" y="-28.125000000000004"/>
         </view>

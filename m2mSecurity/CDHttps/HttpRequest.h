@@ -67,6 +67,9 @@ typedef void(^FailureBlock)(NSError*error);
 
 + (void)HR_AppTuyaWithParams:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure;
 
+//涂鸦密码
++ (void)HR_TuYapasswordWithParams:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure;
+
 + (void)HR_ModifyPersonalDataWithParams:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure;
 
 //阿里云验证
@@ -129,5 +132,7 @@ typedef void(^FailureBlock)(NSError*error);
 
 //用户详情
 + (void)HR_AppUserInfoWithContent:(NSString *)content Params:(NSDictionary *)params success:(SuccessBlock)success failure:(FailureBlock)failure;
+
+
 
 @end

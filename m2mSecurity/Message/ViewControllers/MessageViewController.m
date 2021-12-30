@@ -47,7 +47,7 @@ static NSString *cellID = @"cellID";
 -(void)setupTableView{
     [self.myTableView registerNib:[UINib nibWithNibName:@"MessageCell" bundle:nil] forCellReuseIdentifier:cellID];
     self.myTableView.rowHeight = 215;
-    [self.myTableView addNoteViewWithpicName:@"noDevice" noteText:@"" refreshBtnImg:nil orginY:120];
+    [self.myTableView addNoteViewWithpicName:@"noNoti" noteText:@"" refreshBtnImg:nil orginY:120];
     
     self.myTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         self.page = 1;
@@ -113,7 +113,7 @@ static NSString *cellID = @"cellID";
     NSIndexPath *index=[NSIndexPath indexPathForRow:indexPath.row inSection:0];
     [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:index, nil] withRowAnimation:UITableViewRowAnimationNone];
     
-    MessageDetailViewController *detailVC = [[MessageDetailViewController alloc]init];
+    MessageDetailViewController *detailVC = [[MessageDetailViewController alloc] init];
     detailVC.pushId = model.pushId;
     [self.navigationController pushViewController:detailVC animated:YES];
 }

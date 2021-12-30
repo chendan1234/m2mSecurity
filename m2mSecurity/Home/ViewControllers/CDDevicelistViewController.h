@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)setupHomeDevice;
 
+@property (nonatomic, copy) void(^stateBlock)(void);
+
 
 @end
 

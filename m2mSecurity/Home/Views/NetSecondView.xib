@@ -165,7 +165,7 @@
         </view>
     </objects>
     <resources>
-        <image name="pwd" width="17" height="21"/>
+        <image name="pwd" width="20" height="22"/>
         <image name="wi-fi" width="24" height="20"/>
         <image name="wifiTip" width="271" height="158"/>
         <namedColor name="AccentColor">

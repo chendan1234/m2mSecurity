@@ -26,6 +26,8 @@
     [super awakeFromNib];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getUserInfo) name:KUpdateExpireTime object:nil];
+    
+    
 }
 
 -(void)setUpInfo{

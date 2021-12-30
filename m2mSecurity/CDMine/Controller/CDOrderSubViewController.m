@@ -77,6 +77,8 @@ static NSString *labCellID = @"labCellID";
         parames[@"status"] = @(self.type);
     }
     
+    
+    
     if (self.totalCount && [self.totalCount intValue] <= self.dataArr.count) {
         [self.myTableView.mj_header endRefreshing];
         [self.myTableView.mj_footer endRefreshing];

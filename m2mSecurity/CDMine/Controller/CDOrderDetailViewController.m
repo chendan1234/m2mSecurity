@@ -36,6 +36,38 @@
 static NSString *cellID = @"cellID";
 @implementation CDOrderDetailViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [self setStatusBarBackgroundColor:[CDHelper getColor:@"3292F6"]];
+    
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+     [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [self setStatusBarBackgroundColor:[UIColor whiteColor]];
+}
+
+//设置状态栏颜色
+- (void)setStatusBarBackgroundColor:(UIColor *)color {
+    
+    UIView *statusBar;
+        if (@available(iOS 13.0, *))
+        {
+            UIWindow *keyWindow = [UIApplication sharedApplication].windows[0];
+            statusBar = [[UIView alloc]initWithFrame:keyWindow.windowScene.statusBarManager.statusBarFrame] ;
+            [keyWindow addSubview:statusBar];
+        }
+        else
+        {
+           statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+        }
+        if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
+            statusBar.backgroundColor = color;
+        }
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -43,6 +75,8 @@ static NSString *cellID = @"cellID";
     self.title = @"订单详情";
     
     [self getData];
+    
+    
 }
 
 -(void)getData{
@@ -131,6 +165,9 @@ static NSString *cellID = @"cellID";
     }
 }
 
+- (IBAction)back:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 
 

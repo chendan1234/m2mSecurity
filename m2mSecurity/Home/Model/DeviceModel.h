@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong)NSString *img;
 @property (nonatomic, strong)NSString *title;
 @property (nonatomic, assign)NSInteger contentType;//0:EZ  1:二维码
+@property (nonatomic, assign)BOOL isWangGuan;
 
 @end
 

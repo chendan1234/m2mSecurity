@@ -185,22 +185,41 @@
 
 -(void)saveSuccess{
     
-    [CDAppUser getUser].address = self.addressLab.text;
-    [CDAppUser getUser].avatarUrl = self.uploadUrl;
-    [CDAppUser getUser].username = self.nickNameLab.text;
-    [CDAppUser getUser].sex = [self.selectedBtn.titleLabel.text isEqual:@"Man"]?@"1":@"2";
-    [CDAppUser getUser].userId = [[NSUserDefaults standardUserDefaults]objectForKey:KUserId];
+    CDAppUser *user = [CDAppUser getUser];
     
-    [CDAppUser setUser:[CDAppUser getUser]];
+    user.address = self.addressLab.text;
+    user.avatarUrl = self.uploadUrl;
+    user.username = self.nickNameLab.text;
+    user.sex = [self.selectedBtn.titleLabel.text isEqual:@"Man"]?@"1":@"2";
+    user.userId = [[NSUserDefaults standardUserDefaults]objectForKey:KUserId];
+    
+    [CDAppUser setUser:user];
+    
+    
+    [self saveInfoToTuya];//涂鸦更新名称和头像
     
     if (self.myBlock) {
         self.myBlock();
     }
     
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"changeUserIcon" object:nil];
+    [[NSNotificationCenter defaultCenter]postNotificationName:KChangeUserIcon object:nil];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.navigationController popViewControllerAnimated:YES];
     });
+}
+
+-(void)saveInfoToTuya{
+    [[TuyaSmartUser sharedInstance] updateNickname:self.nickNameLab.text success:^{
+        NSLog(@"用户名更新成功");
+    } failure:^(NSError *error) {
+        NSLog(@"用户名更新失败");
+    }];
+    
+    [[TuyaSmartUser sharedInstance] updateHeadIcon:[CDHelper getImageFromURL:self.uploadUrl] success:^{
+        NSLog(@"头像更新成功");
+    } failure:^(NSError *error) {
+         NSLog(@"头像更新失败");
+    }];
 }
 
 

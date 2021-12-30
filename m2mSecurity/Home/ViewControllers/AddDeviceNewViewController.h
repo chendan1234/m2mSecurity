@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign)NSInteger type; //1.二维码 2.快连
 
+@property (nonatomic, assign)BOOL isWangGuan;
+
 @end
 
 NS_ASSUME_NONNULL_END

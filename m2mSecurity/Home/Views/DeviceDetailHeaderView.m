@@ -113,6 +113,9 @@
 
 //遥控
 -(void)yaoKong{
+    
+    NSLog(@"遥控----%@",self.dic);
+    
     self.otherH.constant = 0.0;
     self.dianLab.text = [NSString stringWithFormat:@"%@%%",self.dic[@"3"]]; //电量
     
@@ -200,6 +203,9 @@
 
 //sos
 -(void)sos{
+    
+    NSLog(@"sos----%@",self.dic);
+    
     self.otherH.constant = 0.0;
     self.dianLab.text = [NSString stringWithFormat:@"%@%%",self.dic[@"3"]];
     

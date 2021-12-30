@@ -68,7 +68,7 @@
     [HttpRequest HR_AppInfoByEmailOrMobileWithParams:parames success:^(id result) {
         NSLog(@"----%@",result);
         if ([result[@"code"] intValue] == 200) {
-            self.account = [NSString stringWithFormat:@"m2m%@_CD",result[@"data"][@"userId"]];
+            self.account = [CDHelper getUidWith:result[@"data"][@"userId"]];
             [self sureSubmit];
         }else{
             [CDHelper dealWithPingTaiErrorWithVC:self result:result];

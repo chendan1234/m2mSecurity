@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		021A150054AC379948FE1871 /* Pods_m2mSecurity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337C2F15146EACE2E0258424 /* Pods_m2mSecurity.framework */; };
+		0724A23B276AE5AD00F308E0 /* NonomalDeviceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0724A23A276AE5AD00F308E0 /* NonomalDeviceView.m */; };
+		0724A23D276AE5B700F308E0 /* NonomalDeviceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0724A23C276AE5B700F308E0 /* NonomalDeviceView.xib */; };
+		0724A246277AE79800F308E0 /* NonomalDeviceSubCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0724A244277AE79700F308E0 /* NonomalDeviceSubCell.m */; };
+		0724A247277AE79800F308E0 /* NonomalDeviceSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0724A245277AE79700F308E0 /* NonomalDeviceSubCell.xib */; };
 		07378B7F26F341D70088BFF3 /* DeviceShengGuangView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07378B7E26F341D60088BFF3 /* DeviceShengGuangView.m */; };
 		07378B8126F341E10088BFF3 /* DeviceShengGuangView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07378B8026F341E10088BFF3 /* DeviceShengGuangView.xib */; };
 		07378B8426F345B00088BFF3 /* DeviceWangGuanInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07378B8326F345B00088BFF3 /* DeviceWangGuanInfoView.m */; };
@@ -37,6 +41,8 @@
 		07378BC52716B2050088BFF3 /* HelpDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07378BC32716B2050088BFF3 /* HelpDetailViewController.m */; };
 		07378BC62716B2050088BFF3 /* HelpDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07378BC42716B2050088BFF3 /* HelpDetailViewController.xib */; };
 		0746126326D4E2D500619324 /* DeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0746126226D4E2D500619324 /* DeviceModel.m */; };
+		0756963627449BA400D44A43 /* CDLanguage.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0756963827449BA400D44A43 /* CDLanguage.strings */; };
+		0756963B2755D36900D44A43 /* t_s.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 0756963A2755D36900D44A43 /* t_s.bmp */; };
 		0757DB1026DF29B300F7AB97 /* AddDeviceZigbeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0757DB0E26DF29B300F7AB97 /* AddDeviceZigbeeViewController.m */; };
 		0757DB1126DF29B300F7AB97 /* AddDeviceZigbeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0757DB0F26DF29B300F7AB97 /* AddDeviceZigbeeViewController.xib */; };
 		0757DB1426DF4F7300F7AB97 /* DeviceLogListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0757DB1326DF4F7300F7AB97 /* DeviceLogListModel.m */; };
@@ -64,11 +70,13 @@
 		075C42FB26E9FD60004E53E5 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075C42F926E9FD5F004E53E5 /* MessageCell.xib */; };
 		075C42FF26EAF865004E53E5 /* HelpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 075C42FD26EAF865004E53E5 /* HelpCell.m */; };
 		075C430026EAF865004E53E5 /* HelpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075C42FE26EAF865004E53E5 /* HelpCell.xib */; };
+		0781D7AD27265E9A001F2395 /* protocol.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0781D7AC27265E99001F2395 /* protocol.rtf */; };
+		0781D7B127265EC4001F2395 /* CDProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0781D7AF27265EC4001F2395 /* CDProtocolViewController.m */; };
+		0781D7B227265EC4001F2395 /* CDProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0781D7B027265EC4001F2395 /* CDProtocolViewController.xib */; };
 		07948F3926C399FC00B3D267 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07948F3826C399FC00B3D267 /* AppDelegate.m */; };
 		07948F4426C39A0300B3D267 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07948F4326C39A0300B3D267 /* Assets.xcassets */; };
 		07948F4726C39A0300B3D267 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07948F4526C39A0300B3D267 /* LaunchScreen.storyboard */; };
 		07948F4A26C39A0300B3D267 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07948F4926C39A0300B3D267 /* main.m */; };
-		07948F5626C3BD8100B3D267 /* t_s.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 07948F5526C3BD8100B3D267 /* t_s.bmp */; };
 		07948F7D26C4F24500B3D267 /* DeviceDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07948F6126C4F24500B3D267 /* DeviceDetailTableViewController.m */; };
 		07948F7E26C4F24500B3D267 /* SwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07948F6626C4F24500B3D267 /* SwitchTableViewCell.m */; };
 		07948F7F26C4F24500B3D267 /* EnumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07948F6726C4F24500B3D267 /* EnumTableViewCell.m */; };
@@ -242,13 +250,11 @@
 		07CD387626CA55D000E8AE7B /* CDOrderInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CD386026CA55CF00E8AE7B /* CDOrderInfoCell.m */; };
 		07CD387726CA55D000E8AE7B /* CDOrderBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CD386326CA55CF00E8AE7B /* CDOrderBtnCell.m */; };
 		07CD387826CA55D000E8AE7B /* CDOrderInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CD386426CA55CF00E8AE7B /* CDOrderInfoCell.xib */; };
-		07CD387926CA55D000E8AE7B /* CDOrderDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CD386726CA55CF00E8AE7B /* CDOrderDetailView.m */; };
 		07CD387A26CA55D000E8AE7B /* CDMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CD386826CA55CF00E8AE7B /* CDMineCell.m */; };
 		07CD387B26CA55D000E8AE7B /* CDMineTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CD386926CA55CF00E8AE7B /* CDMineTopView.xib */; };
 		07CD387C26CA55D000E8AE7B /* CDChangePhoneOrEmailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CD386A26CA55CF00E8AE7B /* CDChangePhoneOrEmailView.xib */; };
 		07CD387D26CA55D000E8AE7B /* CDMineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CD386B26CA55CF00E8AE7B /* CDMineCell.xib */; };
 		07CD387E26CA55D000E8AE7B /* CDOrderBtnCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CD386C26CA55D000E8AE7B /* CDOrderBtnCell.xib */; };
-		07CD387F26CA55D000E8AE7B /* CDOrderDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CD386E26CA55D000E8AE7B /* CDOrderDetailView.xib */; };
 		07CD388026CA55D000E8AE7B /* CDOrderLabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CD387026CA55D000E8AE7B /* CDOrderLabCell.m */; };
 		07CD388126CA55D000E8AE7B /* CDOrderLabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CD387126CA55D000E8AE7B /* CDOrderLabCell.xib */; };
 		07CD388A26CA583B00E8AE7B /* UIView+ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CD388326CA583B00E8AE7B /* UIView+ProgressView.m */; };
@@ -302,8 +308,6 @@
 		07CD390F26CE4F6E00E8AE7B /* SelectShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CD390D26CE4F6E00E8AE7B /* SelectShareViewController.xib */; };
 		07CD391326CE514600E8AE7B /* MoreShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CD391126CE514600E8AE7B /* MoreShareCell.m */; };
 		07CD391426CE514600E8AE7B /* MoreShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CD391226CE514600E8AE7B /* MoreShareCell.xib */; };
-		07CD391826CF450F00E8AE7B /* AddDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CD391626CF450F00E8AE7B /* AddDeviceViewController.m */; };
-		07CD391926CF450F00E8AE7B /* AddDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CD391726CF450F00E8AE7B /* AddDeviceViewController.xib */; };
 		07CD391C26CF4EC400E8AE7B /* SelectHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CD391B26CF4EC400E8AE7B /* SelectHomeView.m */; };
 		07CD391E26CF4ED800E8AE7B /* SelectHomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CD391D26CF4ED800E8AE7B /* SelectHomeView.xib */; };
 		07CD392826CF9CAC00E8AE7B /* NewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CD392526CF9CAC00E8AE7B /* NewFeatureViewController.m */; };
@@ -311,6 +315,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0724A239276AE5AD00F308E0 /* NonomalDeviceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NonomalDeviceView.h; sourceTree = "<group>"; };
+		0724A23A276AE5AD00F308E0 /* NonomalDeviceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NonomalDeviceView.m; sourceTree = "<group>"; };
+		0724A23C276AE5B700F308E0 /* NonomalDeviceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NonomalDeviceView.xib; sourceTree = "<group>"; };
+		0724A243277AE79700F308E0 /* NonomalDeviceSubCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NonomalDeviceSubCell.h; sourceTree = "<group>"; };
+		0724A244277AE79700F308E0 /* NonomalDeviceSubCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NonomalDeviceSubCell.m; sourceTree = "<group>"; };
+		0724A245277AE79700F308E0 /* NonomalDeviceSubCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NonomalDeviceSubCell.xib; sourceTree = "<group>"; };
 		07378B7D26F341D60088BFF3 /* DeviceShengGuangView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceShengGuangView.h; sourceTree = "<group>"; };
 		07378B7E26F341D60088BFF3 /* DeviceShengGuangView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceShengGuangView.m; sourceTree = "<group>"; };
 		07378B8026F341E10088BFF3 /* DeviceShengGuangView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceShengGuangView.xib; sourceTree = "<group>"; };
@@ -357,6 +367,9 @@
 		07378BC42716B2050088BFF3 /* HelpDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpDetailViewController.xib; sourceTree = "<group>"; };
 		0746126126D4E2D500619324 /* DeviceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceModel.h; sourceTree = "<group>"; };
 		0746126226D4E2D500619324 /* DeviceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceModel.m; sourceTree = "<group>"; };
+		0756963727449BA400D44A43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CDLanguage.strings; sourceTree = "<group>"; };
+		0756963927449BA800D44A43 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/CDLanguage.strings"; sourceTree = "<group>"; };
+		0756963A2755D36900D44A43 /* t_s.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = t_s.bmp; sourceTree = "<group>"; };
 		0757DB0D26DF29B300F7AB97 /* AddDeviceZigbeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddDeviceZigbeeViewController.h; sourceTree = "<group>"; };
 		0757DB0E26DF29B300F7AB97 /* AddDeviceZigbeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddDeviceZigbeeViewController.m; sourceTree = "<group>"; };
 		0757DB0F26DF29B300F7AB97 /* AddDeviceZigbeeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDeviceZigbeeViewController.xib; sourceTree = "<group>"; };
@@ -399,6 +412,10 @@
 		075C42FC26EAF865004E53E5 /* HelpCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpCell.h; sourceTree = "<group>"; };
 		075C42FD26EAF865004E53E5 /* HelpCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelpCell.m; sourceTree = "<group>"; };
 		075C42FE26EAF865004E53E5 /* HelpCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpCell.xib; sourceTree = "<group>"; };
+		0781D7AC27265E99001F2395 /* protocol.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = protocol.rtf; sourceTree = "<group>"; };
+		0781D7AE27265EC4001F2395 /* CDProtocolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDProtocolViewController.h; sourceTree = "<group>"; };
+		0781D7AF27265EC4001F2395 /* CDProtocolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDProtocolViewController.m; sourceTree = "<group>"; };
+		0781D7B027265EC4001F2395 /* CDProtocolViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDProtocolViewController.xib; sourceTree = "<group>"; };
 		07948F3426C399FC00B3D267 /* m2mSecurity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = m2mSecurity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07948F3726C399FC00B3D267 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		07948F3826C399FC00B3D267 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -406,7 +423,6 @@
 		07948F4626C39A0300B3D267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07948F4826C39A0300B3D267 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07948F4926C39A0300B3D267 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		07948F5526C3BD8100B3D267 /* t_s.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = t_s.bmp; sourceTree = "<group>"; };
 		07948F5726C3BFDA00B3D267 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		07948F6126C4F24500B3D267 /* DeviceDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetailTableViewController.m; sourceTree = "<group>"; };
 		07948F6226C4F24500B3D267 /* DeviceControlCellHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceControlCellHelper.h; sourceTree = "<group>"; };
@@ -670,14 +686,11 @@
 		07CD386426CA55CF00E8AE7B /* CDOrderInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDOrderInfoCell.xib; sourceTree = "<group>"; };
 		07CD386526CA55CF00E8AE7B /* CDChangePhoneOrEmailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDChangePhoneOrEmailView.h; sourceTree = "<group>"; };
 		07CD386626CA55CF00E8AE7B /* CDPayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPayView.h; sourceTree = "<group>"; };
-		07CD386726CA55CF00E8AE7B /* CDOrderDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDOrderDetailView.m; sourceTree = "<group>"; };
 		07CD386826CA55CF00E8AE7B /* CDMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMineCell.m; sourceTree = "<group>"; };
 		07CD386926CA55CF00E8AE7B /* CDMineTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDMineTopView.xib; sourceTree = "<group>"; };
 		07CD386A26CA55CF00E8AE7B /* CDChangePhoneOrEmailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDChangePhoneOrEmailView.xib; sourceTree = "<group>"; };
 		07CD386B26CA55CF00E8AE7B /* CDMineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDMineCell.xib; sourceTree = "<group>"; };
 		07CD386C26CA55D000E8AE7B /* CDOrderBtnCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDOrderBtnCell.xib; sourceTree = "<group>"; };
-		07CD386D26CA55D000E8AE7B /* CDOrderDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDOrderDetailView.h; sourceTree = "<group>"; };
-		07CD386E26CA55D000E8AE7B /* CDOrderDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDOrderDetailView.xib; sourceTree = "<group>"; };
 		07CD386F26CA55D000E8AE7B /* CDOrderLabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDOrderLabCell.h; sourceTree = "<group>"; };
 		07CD387026CA55D000E8AE7B /* CDOrderLabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDOrderLabCell.m; sourceTree = "<group>"; };
 		07CD387126CA55D000E8AE7B /* CDOrderLabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDOrderLabCell.xib; sourceTree = "<group>"; };
@@ -760,9 +773,6 @@
 		07CD391026CE514600E8AE7B /* MoreShareCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreShareCell.h; sourceTree = "<group>"; };
 		07CD391126CE514600E8AE7B /* MoreShareCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreShareCell.m; sourceTree = "<group>"; };
 		07CD391226CE514600E8AE7B /* MoreShareCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreShareCell.xib; sourceTree = "<group>"; };
-		07CD391526CF450F00E8AE7B /* AddDeviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddDeviceViewController.h; sourceTree = "<group>"; };
-		07CD391626CF450F00E8AE7B /* AddDeviceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddDeviceViewController.m; sourceTree = "<group>"; };
-		07CD391726CF450F00E8AE7B /* AddDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDeviceViewController.xib; sourceTree = "<group>"; };
 		07CD391A26CF4EC400E8AE7B /* SelectHomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectHomeView.h; sourceTree = "<group>"; };
 		07CD391B26CF4EC400E8AE7B /* SelectHomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectHomeView.m; sourceTree = "<group>"; };
 		07CD391D26CF4ED800E8AE7B /* SelectHomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectHomeView.xib; sourceTree = "<group>"; };
@@ -786,6 +796,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0756963327449A9C00D44A43 /* LanguageConfig */ = {
+			isa = PBXGroup;
+			children = (
+				0756963827449BA400D44A43 /* CDLanguage.strings */,
+			);
+			path = LanguageConfig;
+			sourceTree = "<group>";
+		};
 		075C42F326E9B942004E53E5 /* Badge */ = {
 			isa = PBXGroup;
 			children = (
@@ -827,9 +845,9 @@
 				07CD37E426CA545B00E8AE7B /* CDMine */,
 				07CD37CD26CA545B00E8AE7B /* CDLogin */,
 				07CD379726C9FDEA00E8AE7B /* Help */,
-				07948F5526C3BD8100B3D267 /* t_s.bmp */,
 				07948F3726C399FC00B3D267 /* AppDelegate.h */,
 				07948F3826C399FC00B3D267 /* AppDelegate.m */,
+				0756963A2755D36900D44A43 /* t_s.bmp */,
 				07948F4326C39A0300B3D267 /* Assets.xcassets */,
 				07948F4526C39A0300B3D267 /* LaunchScreen.storyboard */,
 				07948F4826C39A0300B3D267 /* Info.plist */,
@@ -896,6 +914,7 @@
 		07948F8E26C4F40A00B3D267 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				0756963327449A9C00D44A43 /* LanguageConfig */,
 				07CD37C826CA544C00E8AE7B /* CDHttps */,
 				07CD37B226C9FFED00E8AE7B /* MineHelper */,
 				07CD37B126C9FFCE00E8AE7B /* TuyaHelper */,
@@ -1131,9 +1150,6 @@
 				07CD38C926CC9FA000E8AE7B /* ScanViewController.h */,
 				07CD38CA26CC9FA000E8AE7B /* ScanViewController.m */,
 				07CD38CB26CC9FA000E8AE7B /* ScanViewController.xib */,
-				07CD391526CF450F00E8AE7B /* AddDeviceViewController.h */,
-				07CD391626CF450F00E8AE7B /* AddDeviceViewController.m */,
-				07CD391726CF450F00E8AE7B /* AddDeviceViewController.xib */,
 				0794C82C26DC7C4100DA535C /* AddDeviceNewViewController.h */,
 				0794C82D26DC7C4100DA535C /* AddDeviceNewViewController.m */,
 				0794C82E26DC7C4100DA535C /* AddDeviceNewViewController.xib */,
@@ -1258,6 +1274,12 @@
 				07378BA52702A78A0088BFF3 /* MenLingInfoView.h */,
 				07378BA62702A78A0088BFF3 /* MenLingInfoView.m */,
 				07378BA82702A7990088BFF3 /* MenLingInfoView.xib */,
+				0724A239276AE5AD00F308E0 /* NonomalDeviceView.h */,
+				0724A23A276AE5AD00F308E0 /* NonomalDeviceView.m */,
+				0724A23C276AE5B700F308E0 /* NonomalDeviceView.xib */,
+				0724A243277AE79700F308E0 /* NonomalDeviceSubCell.h */,
+				0724A244277AE79700F308E0 /* NonomalDeviceSubCell.m */,
+				0724A245277AE79700F308E0 /* NonomalDeviceSubCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1403,6 +1425,9 @@
 				07CD392626CF9CAC00E8AE7B /* NewFeatureViewController.h */,
 				07CD392526CF9CAC00E8AE7B /* NewFeatureViewController.m */,
 				07CD392726CF9CAC00E8AE7B /* NewFeatureViewController.xib */,
+				0781D7AE27265EC4001F2395 /* CDProtocolViewController.h */,
+				0781D7AF27265EC4001F2395 /* CDProtocolViewController.m */,
+				0781D7B027265EC4001F2395 /* CDProtocolViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1414,6 +1439,7 @@
 				07CD37DB26CA545B00E8AE7B /* CDAppUser.m */,
 				07378BAF270409C30088BFF3 /* NewFeatureModel.h */,
 				07378BB0270409C30088BFF3 /* NewFeatureModel.m */,
+				0781D7AC27265E99001F2395 /* protocol.rtf */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1454,8 +1480,8 @@
 				07CD37F626CA545B00E8AE7B /* CDModifyInfoViewController.h */,
 				07CD37E626CA545B00E8AE7B /* CDModifyInfoViewController.m */,
 				07CD37FE26CA545B00E8AE7B /* CDModifyInfoViewController.xib */,
-				07CD37F226CA545B00E8AE7B /* CDChangePhoneOrEmailViewController.m */,
 				07CD380126CA545B00E8AE7B /* CDChangePhoneOrEmailViewController.h */,
+				07CD37F226CA545B00E8AE7B /* CDChangePhoneOrEmailViewController.m */,
 				07CD37FF26CA545B00E8AE7B /* CDChangePhoneOrEmailViewController.xib */,
 				07CD37EB26CA545B00E8AE7B /* CDOrderViewController.h */,
 				07CD37FC26CA545B00E8AE7B /* CDOrderViewController.m */,
@@ -1470,8 +1496,8 @@
 				07CD37F826CA545B00E8AE7B /* CDPayViewController.m */,
 				07CD37F526CA545B00E8AE7B /* CDPayViewController.xib */,
 				07CD37ED26CA545B00E8AE7B /* CDChangePwdViewController.h */,
-				07CD37F126CA545B00E8AE7B /* CDChangePwdViewController.xib */,
 				07CD380226CA545B00E8AE7B /* CDChangePwdViewController.m */,
+				07CD37F126CA545B00E8AE7B /* CDChangePwdViewController.xib */,
 				07CD37F926CA545B00E8AE7B /* CDRefundViewController.h */,
 				07CD37F026CA545B00E8AE7B /* CDRefundViewController.m */,
 				07CD37E926CA545B00E8AE7B /* CDRefundViewController.xib */,
@@ -1529,9 +1555,6 @@
 				07CD386126CA55CF00E8AE7B /* CDOrderBtnCell.h */,
 				07CD386326CA55CF00E8AE7B /* CDOrderBtnCell.m */,
 				07CD386C26CA55D000E8AE7B /* CDOrderBtnCell.xib */,
-				07CD386D26CA55D000E8AE7B /* CDOrderDetailView.h */,
-				07CD386726CA55CF00E8AE7B /* CDOrderDetailView.m */,
-				07CD386E26CA55D000E8AE7B /* CDOrderDetailView.xib */,
 				07CD385D26CA55CF00E8AE7B /* CDOrderInfoCell.h */,
 				07CD386026CA55CF00E8AE7B /* CDOrderInfoCell.m */,
 				07CD386426CA55CF00E8AE7B /* CDOrderInfoCell.xib */,
@@ -1699,6 +1722,7 @@
 				0794C84426DCC44B00DA535C /* NetThreeView.xib in Resources */,
 				07CD382B26CA545B00E8AE7B /* CDLoginViewController.xib in Resources */,
 				0794905226C4F49C00B3D267 /* ty_camera_photo_icon@3x.png in Resources */,
+				0756963627449BA400D44A43 /* CDLanguage.strings in Resources */,
 				07CD38B826CB960200E8AE7B /* CDHandleQuickViewController.xib in Resources */,
 				0794C81B26D87F7B00DA535C /* DeviceDetailHeaderView.xib in Resources */,
 				0794905626C4F49C00B3D267 /* ty_mainbt_about@3x.png in Resources */,
@@ -1714,7 +1738,6 @@
 				0757DB1E26E1B9C500F7AB97 /* AddDeviceAPViewController.xib in Resources */,
 				0794903326C4F49C00B3D267 /* tp_top_bar_more@3x.png in Resources */,
 				07CD390F26CE4F6E00E8AE7B /* SelectShareViewController.xib in Resources */,
-				07CD387F26CA55D000E8AE7B /* CDOrderDetailView.xib in Resources */,
 				0794902C26C4F49C00B3D267 /* ty_mainbt_about_active@2x.png in Resources */,
 				0794C82526D8821200DA535C /* DeviceDetailViewController.xib in Resources */,
 				0794C81326D622AB00DA535C /* QRView.xib in Resources */,
@@ -1727,6 +1750,7 @@
 				07948F4426C39A0300B3D267 /* Assets.xcassets in Resources */,
 				0794904526C4F49C00B3D267 /* ty_camera_tool_play_normal@2x.png in Resources */,
 				07CD387C26CA55D000E8AE7B /* CDChangePhoneOrEmailView.xib in Resources */,
+				0724A23D276AE5B700F308E0 /* NonomalDeviceView.xib in Resources */,
 				0757DB2326E1BA1300F7AB97 /* NetApView.xib in Resources */,
 				0794C86D26DDD21A00DA535C /* AddDeviceSuccessViewController.xib in Resources */,
 				0794902D26C4F49C00B3D267 /* ty_camera_tool_download_normal@2x.png in Resources */,
@@ -1757,13 +1781,12 @@
 				07CD389226CB4E2600E8AE7B /* MyHomeListView.xib in Resources */,
 				0794905426C4F49C00B3D267 /* ty_camera_soundOn_icon@3x.png in Resources */,
 				0794903A26C4F49C00B3D267 /* ty_camera_tool_pause_normal@3x.png in Resources */,
-				07CD391926CF450F00E8AE7B /* AddDeviceViewController.xib in Resources */,
 				0794902926C4F49C00B3D267 /* ty_camera_soundOff_icon@2x.png in Resources */,
+				0781D7B227265EC4001F2395 /* CDProtocolViewController.xib in Resources */,
 				0794903C26C4F49C00B3D267 /* ty_camera_control_hd_normal@3x.png in Resources */,
 				07378B9F26FD76650088BFF3 /* MenLingDetailCell.xib in Resources */,
 				07CD37A026C9FEC700E8AE7B /* HomeViewController.xib in Resources */,
 				07CD38DC26CDF09F00E8AE7B /* DeviceInfoViewController.xib in Resources */,
-				07948F5626C3BD8100B3D267 /* t_s.bmp in Resources */,
 				07CD382826CA545B00E8AE7B /* CDFindPasswordViewController.xib in Resources */,
 				07378B9026F467190088BFF3 /* ShuXingCell.xib in Resources */,
 				07CD38A626CB7FF100E8AE7B /* HomeDeleteViewController.xib in Resources */,
@@ -1777,11 +1800,14 @@
 				0794900E26C4F49C00B3D267 /* IPCLocalizable.strings in Resources */,
 				0794904C26C4F49C00B3D267 /* ty_camera_control_sd_normal@2x.png in Resources */,
 				0794902826C4F49C00B3D267 /* tp_top_bar_more@2x.png in Resources */,
+				0781D7AD27265E9A001F2395 /* protocol.rtf in Resources */,
 				07378B8B26F465EF0088BFF3 /* ShuXingView.xib in Resources */,
 				07CD391E26CF4ED800E8AE7B /* SelectHomeView.xib in Resources */,
+				0756963B2755D36900D44A43 /* t_s.bmp in Resources */,
 				0794904926C4F49C00B3D267 /* ty_mainbt_devicelist@2x.png in Resources */,
 				07378BC62716B2050088BFF3 /* HelpDetailViewController.xib in Resources */,
 				0757DB1926DF5C1700F7AB97 /* SelectTimeView.xib in Resources */,
+				0724A247277AE79800F308E0 /* NonomalDeviceSubCell.xib in Resources */,
 				0794900F26C4F49C00B3D267 /* ty_custom_config.json in Resources */,
 				0794903826C4F49C00B3D267 /* tp_top_bar_goBack@2x.png in Resources */,
 			);
@@ -1877,7 +1903,6 @@
 				07378B8426F345B00088BFF3 /* DeviceWangGuanInfoView.m in Sources */,
 				07CD384026CA545B00E8AE7B /* CDOrderViewController.m in Sources */,
 				0757DB1D26E1B9C500F7AB97 /* AddDeviceAPViewController.m in Sources */,
-				07CD387926CA55D000E8AE7B /* CDOrderDetailView.m in Sources */,
 				07378B8F26F467190088BFF3 /* ShuXingCell.m in Sources */,
 				07948F7F26C4F24500B3D267 /* EnumTableViewCell.m in Sources */,
 				07948F7E26C4F24500B3D267 /* SwitchTableViewCell.m in Sources */,
@@ -1900,6 +1925,8 @@
 				07CD383226CA545B00E8AE7B /* CDModifyInfoViewController.m in Sources */,
 				0794C83826DC7E7600DA535C /* NetFirstView.m in Sources */,
 				07CD37C726CA36DF00E8AE7B /* UIView+DSExtension.m in Sources */,
+				0724A246277AE79800F308E0 /* NonomalDeviceSubCell.m in Sources */,
+				0781D7B127265EC4001F2395 /* CDProtocolViewController.m in Sources */,
 				07CD38B326CB88B700E8AE7B /* CDQuickCell.m in Sources */,
 				0794C81126D6229500DA535C /* QRView.m in Sources */,
 				0757DB3526E2118200F7AB97 /* NetWiredSearchView.m in Sources */,
@@ -1928,6 +1955,7 @@
 				07CD38A526CB7FF100E8AE7B /* HomeDeleteViewController.m in Sources */,
 				07948F8226C4F24500B3D267 /* SliderTableViewCell.m in Sources */,
 				07948F7D26C4F24500B3D267 /* DeviceDetailTableViewController.m in Sources */,
+				0724A23B276AE5AD00F308E0 /* NonomalDeviceView.m in Sources */,
 				07378B8926F465E50088BFF3 /* ShuXingView.m in Sources */,
 				07CD382626CA545B00E8AE7B /* CDLoginViewController.m in Sources */,
 				07948F9A26C4F40A00B3D267 /* UIButton+Extensions.m in Sources */,
@@ -1971,7 +1999,6 @@
 				07CD390E26CE4F6E00E8AE7B /* SelectShareViewController.m in Sources */,
 				07CD383D26CA545B00E8AE7B /* CDPayViewController.m in Sources */,
 				0794902526C4F49C00B3D267 /* CameraControlButton.m in Sources */,
-				07CD391826CF450F00E8AE7B /* AddDeviceViewController.m in Sources */,
 				0757DB3026E2115D00F7AB97 /* NetWiredTipView.m in Sources */,
 				07CD388026CA55D000E8AE7B /* CDOrderLabCell.m in Sources */,
 				07378BC12716A8270088BFF3 /* HelpModel.m in Sources */,
@@ -2009,6 +2036,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0756963827449BA400D44A43 /* CDLanguage.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0756963727449BA400D44A43 /* en */,
+				0756963927449BA800D44A43 /* zh-Hans */,
+			);
+			name = CDLanguage.strings;
+			sourceTree = "<group>";
+		};
 		07948F4526C39A0300B3D267 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2159,7 +2195,7 @@
 				CODE_SIGN_ENTITLEMENTS = m2mSecurity/m2mSecurity.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9MR8L9KD66;
+				DEVELOPMENT_TEAM = 39L6W8UJH5;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/m2mSecurity/PrefixHeader.pch";
 				INFOPLIST_FILE = m2mSecurity/Info.plist;
@@ -2335,7 +2371,7 @@
 					"\"YYModel\"",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.m2micro.security2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.m2m.shgs.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/chendan/Desktop/m2mSecurity/m2mSecurity/IPC/Camera/m2m-BrigeHeader.h";
@@ -2353,7 +2389,7 @@
 				CODE_SIGN_ENTITLEMENTS = m2mSecurity/m2mSecurity.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9MR8L9KD66;
+				DEVELOPMENT_TEAM = 39L6W8UJH5;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/m2mSecurity/PrefixHeader.pch";
 				INFOPLIST_FILE = m2mSecurity/Info.plist;
@@ -2529,7 +2565,7 @@
 					"\"YYModel\"",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.m2micro.security2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.m2m.shgs.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/chendan/Desktop/m2mSecurity/m2mSecurity/IPC/Camera/m2m-BrigeHeader.h";

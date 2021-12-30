@@ -30,8 +30,6 @@
             self.reloadBlock();
         }
     }];
-    
-    
 }
 
 @end

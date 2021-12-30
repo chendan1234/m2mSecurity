@@ -36,7 +36,6 @@
     
     [payView setPayBlock:^(CDSubscribeModel * _Nonnull model) {
         self.model = model;
-        
         [CDHelper setupAlterWithVC:self title:@"确认支付?" message:@"" sure:^{
             [self pay];
         }];

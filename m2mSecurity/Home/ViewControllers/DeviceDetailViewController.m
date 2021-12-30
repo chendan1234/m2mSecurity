@@ -96,8 +96,6 @@ static NSString *cellID = @"cellID";
     }else{
         infoVC.form = DeviceInfoFormDefault;
     }
-    
-    
     [self.navigationController pushViewController:infoVC animated:YES];
 }
 
@@ -137,7 +135,7 @@ static NSString *cellID = @"cellID";
 }
 
 -(void)setupData{
-    NSMutableArray *dps = [[NSMutableArray alloc]init];
+    NSMutableArray *dps = [[NSMutableArray alloc] init];
     self.dpDic = [NSMutableDictionary dictionary];
     for (TuyaSmartSchemaModel *model in self.deviceModel.schemaArray) {
         [dps addObject:model.dpId];

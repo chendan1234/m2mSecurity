@@ -13,7 +13,7 @@
  */
 
 //token
-#define Token  [CDAppUser getUser].tokenId
+//#define Token  [CDAppUser getUser].tokenId
 
 
 
@@ -53,6 +53,9 @@
 //2.1登陆App
 #define Login @"m2micro-auth/app/login"
 #define AppTuya @"m2micro-app/appTuya/mapping"
+
+//涂鸦密码
+#define TuYapassword @"m2micro-app/appTuya/password"
 
 //上传图片
 #define Image_upload @"m2micro-app/appUserController/upload"
@@ -122,6 +125,9 @@
 
 //用户详情
 #define AppUserInfo @"m2micro-app/appUserController/appInfo"
+
+
+
 
 
 

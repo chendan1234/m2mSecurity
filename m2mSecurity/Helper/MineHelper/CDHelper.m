@@ -739,12 +739,14 @@
 
 + (void)judgeIsHavedWangGuanWithVc:(id)vc deviceModel:(TuyaSmartDeviceModel *)model {
     
-    if (model.deviceType == 4) {// 添加的是网关设备, 且已经有网关设备了
+    if ([self isWangGuan2:model]) {// 添加的是网关设备, 且已经有网关设备了
+        
+//    if ([self isWangGuanWithModel:model]) {// 添加的是网关设备, 且已经有网关设备了
         
         TuyaSmartHome *home = [TuyaSmartHome homeWithHomeId:[CDHelper getHomeId]];
         NSMutableArray *wangGuanArr = [[NSMutableArray alloc]init];
         for (TuyaSmartDeviceModel *deviceModel in home.deviceList) {
-            if (deviceModel.deviceType == 4) {
+            if ([self isWangGuan2:deviceModel]) {
                 [wangGuanArr addObject:deviceModel];
             }
         }
@@ -770,12 +772,25 @@
     return NO;
 }
 
+
++(BOOL)isWangGuan2:(TuyaSmartDeviceModel *)model{
+    if (model.deviceType == 4) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
+
 +(TuyaSmartDeviceModel *)getWangGuanModel{
     TuyaSmartHome *home = [TuyaSmartHome homeWithHomeId:[CDHelper getHomeId]];
     for (TuyaSmartDeviceModel *deviceModel in home.deviceList) {
-        if (deviceModel.deviceType == 4) {
+        if ([self isWangGuan2:deviceModel]) {
             return deviceModel;
         }
+        
+//        if ([self getDeviceCategoryWithModel:deviceModel] == DeviceCategroyCDWangGuan) {
+//            return deviceModel;
+//        }
     }
     return nil;
 }
@@ -842,6 +857,23 @@
         }
     } failure:^(NSError *error) {}];
 }
+
+
+//更加url, 返回一张图片
++(UIImage *)getImageFromURL:(NSString *)fileURL {
+    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:fileURL]];
+    return [UIImage imageWithData:data];
+}
+
++(NSString *)getUidWith:(NSString *)uid{
+    return [NSString stringWithFormat:@"m2m%@_m2m",uid];
+}
+
+
++(NSString *)getLanguageWithKey:(NSString *)key{
+    return NSLocalizedStringFromTable(key, KLanguage, @"");
+}
+
 
 
 

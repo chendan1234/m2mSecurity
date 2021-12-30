@@ -7,6 +7,7 @@
 
 #import "CDRegisterViewController.h"
 #import "CDMailRegisterView.h"
+#import "CDProtocolViewController.h"
 
 
 
@@ -54,6 +55,9 @@
 - (IBAction)protocolBtnClick:(id)sender {
 //    ProtocolController *protocolVC = [[ProtocolController alloc]init];
 //    [self.navigationController pushViewController:protocolVC animated:YES];
+    
+    CDProtocolViewController *protocalVC = [[CDProtocolViewController alloc]init];
+    [self.navigationController pushViewController:protocalVC animated:YES];
 }
 
 //注册

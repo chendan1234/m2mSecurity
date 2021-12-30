@@ -40,6 +40,8 @@
 @property (nonatomic, assign)NSInteger homeId;
 
 
+@property (nonatomic, strong) TuyaSecurity *homeSecurity;
+
 @end
 
 static NSString *tebleCellID = @"tebleCellID";
@@ -51,6 +53,13 @@ static NSString *collectionCellID = @"collectionCellID";
         _homeManager = [[TuyaSmartHomeManager alloc] init];
     }
     return _homeManager;
+}
+
+- (TuyaSecurity *)homeSecurity {
+    if (!_homeSecurity) {
+        _homeSecurity = [[TuyaSecurity alloc] init];
+    }
+    return _homeSecurity;
 }
 
 - (void)viewDidLoad {
@@ -68,6 +77,8 @@ static NSString *collectionCellID = @"collectionCellID";
 -(void)setupHomeDevice{
     
     self.homeId = [CDHelper getHomeId];
+    
+    NSLog(@"222---%ld",[CDHelper getHomeId]);
     
     if (self.homeId == 0) {//清除所有设备
         self.home = nil;
@@ -124,9 +135,9 @@ static NSString *collectionCellID = @"collectionCellID";
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (self.type == 1) {
+    if (self.type == 1) {//全部设备
         return self.home?self.home.deviceList.count:0;
-    }else{
+    }else{//共享设备
         return self.home?self.home.sharedDeviceList.count:0;
     }
 }
@@ -147,9 +158,9 @@ static NSString *collectionCellID = @"collectionCellID";
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    if (self.type == 1) {
+    if (self.type == 1) {//全部设备
         return self.home?self.home.deviceList.count:0;
-    }else{
+    }else{//共享设备
         return self.home?self.home.sharedDeviceList.count:0;
     }
 }
@@ -170,21 +181,16 @@ static NSString *collectionCellID = @"collectionCellID";
     
     // 取出TuyaSmartDeviceModel,判断是不是IPC设备
     TuyaSmartDeviceModel *deviceModel = device.deviceModel;
-    
-    
-    
     if (deviceModel.isIPCDevice) {
 //        CameraViewController *vc = [[CameraViewController alloc] initWithDeviceId:deviceModel.devId];
 //        [self.navigationController pushViewController:vc animated:YES];
-        
         
         MenLingViewController *menLingVC = [[MenLingViewController alloc]initWithDeviceId:deviceModel.devId];
         menLingVC.deviceModel = deviceModel;
         [self.navigationController pushViewController:menLingVC animated:YES];
         
     } else {
-        
-        if ([CDHelper isWangGuanWithModel:deviceModel]) {
+        if ([CDHelper isWangGuan2:deviceModel]) {//网关
             DeviceInfoViewController *infoVC = [[DeviceInfoViewController alloc]init];
             infoVC.deviceModel = deviceModel;
             infoVC.form = DeviceInfoFormWangGuan;
@@ -202,6 +208,15 @@ static NSString *collectionCellID = @"collectionCellID";
 - (void)updateHomeDetail {
     [self.home getHomeDetailWithSuccess:^(TuyaSmartHomeModel *homeModel) {
         [self reload];
+        
+//        NSLog(@"homeId = %ld --- deviceList = %@",[CDHelper getHomeId], self.home.deviceList);
+        
+//        [self.homeSecurity getHomeStateWithHomeId:[CDHelper getHomeId] success:^(TuyaSecurityHomeBaseStateModel * _Nonnull result) {
+//            NSLog(@"安防----%@",result);
+//        } failure:^(NSError * _Nonnull error) {
+//            NSLog(@"安防error---%@",error.description);
+//        }];
+        
     } failure:^(NSError *error) {
         [CDHelper setupAlterWithVC:self title:NSLocalizedString(@"Failed to Fetch Home", @"") message:error.localizedDescription sure:^{}];
     }];
@@ -228,6 +243,12 @@ static NSString *collectionCellID = @"collectionCellID";
 }
 
 -(void)reload{
+    
+    
+    if (self.stateBlock) {
+        self.stateBlock();
+    }
+    
     [self.myTableView reloadData];
     [self.myCollectionView reloadData];
     
@@ -236,18 +257,27 @@ static NSString *collectionCellID = @"collectionCellID";
     
     if (self.type == 1) {//我自己的设备, 判断网关
         for (TuyaSmartDeviceModel *model in self.home.deviceList) {//判断列表中是否有一个网关, 一个家庭允许添加一个网关
-            if (model.deviceType == 4) {//网关
+            if ([CDHelper isWangGuan2:model]) {//网关
                 [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:KIsHaveWangGuan];
                 return;
             }else{
                 [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:KIsHaveWangGuan];
             }
+            
+//            if ([CDHelper isWangGuanWithModel:model]) {//网关
+//                [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:KIsHaveWangGuan];
+//                return;
+//            }else{
+//                [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:KIsHaveWangGuan];
+//            }
         }
         
         if (self.home.deviceList.count == 0) {
             [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:KIsHaveWangGuan];
         }
     }
+    
+    
 }
 
 
