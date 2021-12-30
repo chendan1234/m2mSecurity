@@ -1,0 +1,6 @@
+framework module TuyaSecurityBridgeKit {
+  umbrella header "TuyaSecurityBridgeKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

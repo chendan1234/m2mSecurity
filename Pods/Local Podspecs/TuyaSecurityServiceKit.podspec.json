@@ -1,0 +1,32 @@
+{
+  "name": "TuyaSecurityServiceKit",
+  "version": "1.0.0-secbizbundle-3.3.5-rc.3",
+  "summary": "A short description of TuyaSecurityServiceKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://registry.code.tuya-inc.top/tuyaIOS/Modules/Security/TuyaSecurityServiceKit.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "haotian": "haotian@tuya.com"
+  },
+  "source": {
+    "http": "https://images.tuyacn.com/smart/app/package/developer/sdk/1629187099-TuyaSecurityServiceKit-1.0.0-secbizbundle-3.3.5-rc.3.zip",
+    "type": "zip"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "ios/*.framework/Versions/A/Headers/*.h",
+  "public_header_files": "ios/*.framework/Versions/A/Headers/*.h",
+  "static_framework": true,
+  "ios": {
+    "vendored_frameworks": "ios/*.framework"
+  },
+  "dependencies": {
+    "TuyaSecurityBaseKit": [
+
+    ]
+  }
+}
